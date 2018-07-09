@@ -1,0 +1,117 @@
+<div class="page">
+    <div class="main_container">
+        <div class="head_container">
+            <div class="main_logo">
+                <div class="main_logo_img_container"><img class="main_logo_img" src="Images\xue.jpg" ></div>
+                <div class="main_logo_font_container">精英联盟</div>
+            </div>
+            <div class="app_logo">
+                <div class="app_logo_img_container"><img class="app_logo_img" src="Images\timg2.jpg" ></div>
+                <div class="app_logo_font_container">学生信息管理</div>
+            </div>
+            <div class="message_area">
+                <div class="mine">
+                    <img class="m_img" src="Images\img\people.png">
+                </div>
+                <div class="vline"></div>
+                <div class="setting">
+                    <img class="m_img" src="Images\img\setting.png">
+                </div>
+                <div class="vline"></div>
+                <div class="about">
+                    <img class="m_img" src="Images\img\about.png">
+                </div>
+            </div>
+        </div>
+        <div class="body_container">
+            <div class="body_left_container">
+                <div class="first_zoom" ng-click="zoom()">
+                    <img class="first_zoom_img" src="Images/img/normal.png" ng-show="firstZoomFlag ">
+                    <img class="first_zoom_img" src="Images/img/fullscreen.png" ng-hide="firstZoomFlag ">
+                </div>
+                <div class="pline"></div>
+                <div class="first_option">
+                    <div class="options" ng-click="showText()">
+                        <div class="options_img"><img class="img_flag" src="Images/img/zoomin.png" ng-show="firstZoomFlag "><img class="img_flag" src="Images/img/zoomout.png" ng-hide="firstZoomFlag "></div>
+                        <div class="options_font">学生信息</div>
+                    </div>
+                </div>
+                <div class="pline"></div>
+            </div>
+            <div class="body_right_container">
+                <div class="body_main_container">
+                    <div class="text_title">
+                        <div class="options_title_container">
+                            <div class="options_title" ng-mouseenter="mousein()" ng-mouseleave="mouseout()" ng-show="showTitle">
+                                <div class="null1"></div>
+                                <div class="options_title_font">学生表</div>
+                                <div class="options_title_img" ng-click="closeTitle()"><img class="title_img" src="Images/img/views_close.png"></div>
+                            </div>
+                        </div>
+                        <div class="button_container">
+                            <div class="buttons" ng-show="showTitle">
+                                <div class="null2"></div>
+                                <div class="button" ng-click="add()">新增</div>
+                                <div class="button" ng-click="update()">修改</div>
+                                <div class="button" ng-click="delete()">删除</div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="pline2"/>
+                    <div class="text_container">
+                        <div class="condition_container">
+                            <div class="condition1">姓名</div>
+                            <div class="input1"><input class="name" type="text" ></div>
+                            <div class="condition1">班级</div>
+                            <div class="input1"><input class="clas" type="text" ></div>
+                            <div class="condition1">学号</div>
+                            <div class="input1"><input class="stuno" type="number" ></div>
+                            <div class="condition2">精确查询</div>
+                            <div class="input4"><input class="jing" type="checkbox"></div>
+                            <div class="query"><li class="query_button" ng-click="query()">查询</li></div>
+                        </div>
+                        <hr class="pline3"/>
+                        <table class="table">
+                            <tr class="table_title">
+                                <td>序号</td>
+                                <td>姓名</td>
+                                <td>性别</td>
+                                <td>状态</td>
+                                <td>学号</td>
+                                <td>班级</td>
+                                <td>身份证</td>
+                                <td>电话</td>
+                                <td>邮箱</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="page_container">
+                        <div class="page_left"></div>
+                        <div class="page_middle">
+                            <div class="last_page_container"><img class="last_page" ng-click="lastPage()" src="Images/img/leftPage.png"></div>
+                            <div class="now_page">{{nowPage}}</div>
+                            <div class="last_page_container"><img class="next_page" ng-click="nextPage()" src="Images/img/rightPage.png"></div>
+                        </div>
+                        <div class="page_right">
+                            <div class="total_page">共：{{totalPage}}&nbsp;&nbsp;页</div>
+                            <div class="go_page">
+                                <div class="go_page_input_container"><input ng-model="goPage" class="go_page_input" type="text"></div>
+                                <div class="go_button_container"><div ng-click="GO()" class="go_button">GO</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="motile">
+    <div class="motile_text">
+        <div class="motile_left">
+            <table class="motile_table1"></table>
+        </div>
+        <div class="motile_right">
+            <table class="motile_table2"></table>
+        </div>
+    </div>
+</div>
